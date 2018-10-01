@@ -37,5 +37,13 @@ B-blanco, N-negro] NBAA
 * Java
 * Maven
 * GitHub
+* Travis-CI
+* Sonar
 
+
+### Estado del codigo
+
+[![Build Status](https://travis-ci.org/DiegoRiofrio/Mastermind.DiegoRiofrio.svg?branch=master)](https://travis-ci.org/DiegoRiofrio/Mastermind.DiegoRiofrio)
+
+![Quality Gate](https://sonarcloud.io/api/project_badges/measure?project=es.upm.miw%3AMastermind.DiegoRiofrio&metric=alert_status)
 
