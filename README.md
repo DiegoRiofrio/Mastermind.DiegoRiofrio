@@ -1,4 +1,4 @@
-Mastermind.java# DIEGO RIOFRIO
+### DIEGO RIOFRIO Practica ADOO
 
 ### 1. Opción A: Master Mind
 
