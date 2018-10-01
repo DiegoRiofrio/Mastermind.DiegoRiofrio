@@ -1,7 +1,6 @@
 package es.upm.miw.iwvg.classes;
-import java.util.Arrays;
-import java.util.Scanner;
 
+import java.util.Arrays;
 
 public class MastermindRandomController {
     public MastermindRandomController(MastermindModel machineA){
@@ -10,7 +9,7 @@ public class MastermindRandomController {
         int guessNumber = 1;
         boolean stopPlaying = false;
         while (stopPlaying==false){
-            if (guessNumber > 10){ //board only has 10 rows (tries)
+            if (guessNumber > 10){
                 System.out.println("***********************");
                 System.out.println("Fin del Juego. Has perdido!!!.");
                 System.out.println("El codigo correcto era: " + solutionString);
@@ -22,7 +21,7 @@ public class MastermindRandomController {
             MastermindModel machineB=new MastermindModel();
             char[] guess = machineB.getSolution();
             this.print(guess);
-            stopPlaying = isCorrect(guess, machineA.getSolution()); //stop playing when you guess correctly
+            stopPlaying = isCorrect(guess, machineA.getSolution());
             int rightColorRightPlace = getRightColorRightPlace(guess, machineA.getSolution());
             int rightColorWrongPlace = getRightColorWrongPlace(guess, machineA.getSolution());
             int correctedRightColorWrongPlace = rightColorWrongPlace - rightColorRightPlace;
@@ -69,7 +68,7 @@ public class MastermindRandomController {
             solutionValue = solution[i];
             int guessColorAsInt = colorChartoInt(guessValue);
             int solutionColorAsInt = colorChartoInt(solutionValue);
-            guessArrayCounts[guessColorAsInt-1]+=1;// subtract one as a correction from the numbering scheme I used to array counting from 0
+            guessArrayCounts[guessColorAsInt-1]+=1;
             solutionArrayCounts[solutionColorAsInt-1]+=1;
         }
         for (int j=0; j< solutionArrayCounts.length; j++) {
@@ -78,9 +77,8 @@ public class MastermindRandomController {
         return totalMalpositioned;
     }
 
-    //converts char back to corresponding int to use in an array position. Numbers are arbitrary.
     private int colorChartoInt(char colorChar){
-        int colorInt = 0; //0 unassigned to any color.
+        int colorInt = 0;
         if (colorChar == 'A'){
             colorInt = 1;
         }

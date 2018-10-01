@@ -1,5 +1,4 @@
 package es.upm.miw.iwvg.classes;
-import java.util.Scanner;
 
 public class Mastermind {
 

@@ -1,6 +1,5 @@
 package es.upm.miw.iwvg.classes;
 
-import java.util.Random;
 class MastermindModel{
 
     private int[] solutionArray = new int[4];
@@ -18,7 +17,7 @@ class MastermindModel{
     }
 
     public char getColorAt(int i){
-        char color='x'; //variable initialized to x as it doesn't corrrespond to any color.
+        char color='x';
         if (solutionArray[i]==1){
             color = 'A' ;
         }
