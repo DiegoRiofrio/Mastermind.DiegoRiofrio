@@ -1,7 +1,6 @@
 package es.upm.miw.iwvg.classes;
 
 import java.util.Arrays;
-import java.util.Scanner;
 
 public class MastermindController {
 
@@ -23,12 +22,8 @@ public class MastermindController {
             System.out.println("\nIntento? " + guessNumber + ": ");
             String guess = input.nextLine();
             if (guess.length() ==4){
-                if (!(guess.contains("C") || guess.contains("D") ||guess.contains("E")
-                        || guess.contains("F") ||guess.contains("G") || guess.contains("H") || guess.contains("I") || guess.contains("J")
-                        ||guess.contains("K") || guess.contains("L") || guess.contains("M") || guess.contains("O")
-                        || guess.contains("P")|| guess.contains("Q") || guess.contains("S") || guess.contains("T")
-                        || guess.contains("U") || guess.contains("W") ||guess.contains("X") || guess.contains("Y"))){
-
+                if ((guess.contains("A") || guess.contains("B") ||guess.contains("N")
+                        || guess.contains("R") || guess.contains("V") ||guess.contains("Z"))){
                     stopPlaying = isCorrect(guess, model.getSolution());
                     int rightColorRightPlace = getRightColorRightPlace(guess, model.getSolution());
                     int rightColorWrongPlace = getRightColorWrongPlace(guess, model.getSolution());
@@ -93,7 +88,6 @@ public class MastermindController {
         }
         return totalMalpositioned;
     }
-
 
     private int colorChartoInt(char colorChar){
         int colorInt = 0;
